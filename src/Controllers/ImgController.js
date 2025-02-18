@@ -3,27 +3,27 @@ const Img = require('../models/ImgModel')
 const fs = require('fs');
 exports.Avt = async (req, res) => {
     const User  = req.params.user
-        if(User !== null) {
+        if(User !== 'null') {
             return res.sendFile(path.join(__dirname, '..', 'public', 'img', `${User}`));
         }
 }
 
 exports.getImgProduct = async (req, res) => {
     const Product  = req.params.product
-    if(Product !== null) {
+    if(Product !== 'null') {
         return res.sendFile(path.join(__dirname, '..', 'public', 'img', `${Product}`));
     }
     
 }
 exports.HeaderSlide = async (req, res) => {
     const Slide  = req.params.slide
-    if(Slide !== null) {
+    if(Slide !== 'null') {
         return res.sendFile(path.join(__dirname, '..', 'public', 'img', `${Slide}`));
     }
 }
 exports.BodyImg = async (req, res) => {
     const Img  = req.params.img
-    if(Img !== null) {
+    if(Img !== 'null') {
         return res.sendFile(path.join(__dirname, '..', 'public', 'img', `${Img}`));
     }
 }
@@ -42,7 +42,7 @@ exports.getAllSlide = function (req, res) {
         else {
             return res.status(200).json({
                 massege: 'Faile',
-                data: null,
+                data: 'null',
             })
         }
     })
@@ -58,7 +58,7 @@ exports.getAllSlideMini = function (req, res) {
         else {
             return res.status(200).json({
                 massege: 'Faile',
-                data: null,
+                data: 'null',
             })
         }
     })
@@ -74,7 +74,7 @@ exports.getAllImgBody = function (req, res) {
         else {
             return res.status(200).json({
                 massege: 'Faile',
-                data: null,
+                data: 'null',
             })
         }
     })
@@ -90,7 +90,7 @@ exports.getAllImgPageNew = function (req, res) {
         else {
             return res.status(200).json({
                 massege: 'Faile',
-                data: null,
+                data: 'null',
             })
         }
     })
